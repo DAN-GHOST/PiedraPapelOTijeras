@@ -107,13 +107,3 @@ function Game(){
         console.log("Termina en empate.");
     }
 }
-
-window.alert("Primero para poder jugar presiona las sigientes teclas para abrir la consola:\n contol+shift+j.");
-window.alert("Segundo, para empezar a juagar, debes conocer las reglas.");
-window.alert("1. Solo se puede jugar entre dos: Usted y la PC.");
-window.alert("2. Para este juego, Existen 3 movimientos: Piedra, papel o tijera.");
-window.alert("3. La forma en que interactua los tres movimientos son los siguientes: \n 3.1. La piedra le gana a la tijera. \n 3.2. La tijera le gana al papel.\n 3.3. El pale le gana a la piedra.");
-window.alert("4. Si hay un empate no se suman puntos para los jugadores.");
-window.alert("5. La cantidad de rondas son 5.");
-window.alert("Ahora bien y para finalizar, espero que disfrutes el juego y le des un like a este proyecto.");
-console.log(Game());
