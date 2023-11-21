@@ -21,19 +21,20 @@
         </ol>
         <h2>Selección para poder jugar</h2>
         <p>Para poder juagar, nececitas seleccionar alguna de las siguintes opcines que se muestran en los botones de abajo.</p>
-        <div>
-            <button>Piedra</button>
-            <button>Papel</button>
-            <button>Tijeras</button>
+        <div class=" contenedor-botones">
+            <button type="button" value="piedra" class="btnPiedra">Piedra</button>
+            <button type="button" value="papel" class="btnPapel">Papel</button>
+            <button type="button" value="tijera" class="btnTijera">Tijeras</button>
         </div>
         <h2>Resultados del juego</h2>
-        <div>
-            <div>Cantidad de empates:</div>
-            <div>Cantidad de victorias del jugador:</div>
-            <div>Cantidad de victorias de la PC:</div>
+        <div class = "contenedor-resultados">
+            <div class="contenedor-resultados-rondas">cantidad de rondas: <p class="txtRondas">" "</p></div>
+            <div class="contenedor-resultados-empate">Cantidad de empates: <p class="txtEmpate">" "</p></div>
+            <div class="contenedor-resultados-jugador">Cantidad de victorias del jugador: <p class="txtJugador">" "</p></div>
+            <div class="contenedor-resultados-PC">Cantidad de victorias de la PC: <p class="txtPC">" "</p></div>
         </div>
         <p>Tu ganas| tu pierdes</p>
-        <button>Volver a jugar</button>
+        <button class="btnBackGame">Volver a jugar</button>
     </div>
     <script src="./logic.js/Script.js"></script>
 </body>
