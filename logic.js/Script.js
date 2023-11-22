@@ -77,58 +77,110 @@ function seveResults(array){
     txtEmpate = document.querySelector('.txtEmpate'),
     txtJugador = document.querySelector('.txtJugador'),
     txtPC = document.querySelector('.txtPC');
-    
-    /*
-    Hasta el momento la parte de abajo no esta funcinando. La intención del
-    código es tomar la información persistida en el html y comvertirla de string
-    a int para realizar un incremento e ir contando las rondas jugadas y victorias.
-    */
-/*
-    if(txtRondas.textContent === " "){
-        txtRondas.textContent = Ronda.toString();
-        txtEmpate.textContent = tie.toString();
-        txtJugador.textContent = winsPlayer.toString();
-        txtPC.textContent = winsPC.toString();
-    }else if(Integer.parseInt(txtRondas.textContent) <= 5){
-        cantidadRondas = Integer.parseInt(txtRondas.textContent) + Ronda;
-        cantidadEmpates = Integer.parseInt(txtEmpate.textContent) + tie;
-        cantidadVictoriasJuador = Integer.parseInt(txtJugador.textContent) + winsPlayer;
-        cantidadVictoriasPC = Integer.parseInt(txtPC.textContent) + winsPC;
-        txtRondas.textContent = cantidadRondas.toString();
-        txtEmpate.textContent = cantidadEmpates.toString();
-        txtJugador.textContent = cantidadVictoriasJuador.toString();
-        txtPC.textContent = cantidadVictoriasPC.toString();
-    }else if(Integer.parseInt(txtRondas.textContent) === 5){
+
+    txtRondas.textContent = Ronda.toString();
+    txtEmpate.textContent = tie.toString();
+    txtJugador.textContent = winsPlayer.toString();
+    txtPC.textContent = winsPC.toString();
+}
+
+function seguirJugando(array){
+    let Ronda = array[0],
+    tie = array[1],
+    winsPC = array[2],
+    winsPlayer = array[3];
+
+    let txtRondas = document.querySelector('.txtRondas'),
+    txtEmpate = document.querySelector('.txtEmpate'),
+    txtJugador = document.querySelector('.txtJugador'),
+    txtPC = document.querySelector('.txtPC'),
+    txtGanador = document.querySelector('.txtGanador');
+
+    let cantidadRondas = parseInt(txtRondas.textContent) + Ronda;
+    let cantidadEmpates = parseInt(txtEmpate.textContent) + tie;
+    let cantidadVictoriasJuador = parseInt(txtJugador.textContent) + winsPlayer;
+    let cantidadVictoriasPC = parseInt(txtPC.textContent) + winsPC;
+
+    txtRondas.textContent = cantidadRondas.toString();
+    txtEmpate.textContent = cantidadEmpates.toString();
+    txtJugador.textContent = cantidadVictoriasJuador.toString();
+    txtPC.textContent = cantidadVictoriasPC.toString();
+
+    if(cantidadRondas === 5){
         if(cantidadVictoriasJuador < cantidadVictoriasPC){
-            console.log("Gana la computadora.");
+            txtGanador.textContent = "Gana la computadora.";
         }else if (cantidadVictoriasJuador > cantidadVictoriasPC){
-            console.log("Gana el jugador.");
+            txtGanador.textContent = "Gana el jugador.";
         }else if(cantidadVictoriasJuador === cantidadVictoriasPC){
-            console.log("Termina en empate.");
+            txtGanador.textContent = "Termina en empate.";
         }
-    }else{
-        console.log("Juego a terminado. Si queiere volver a jugar por favor seleccione el boton volver a jugar o backGame");
     }
-    */
+}
+
+function gameBack(){
+    let txtRondas = document.querySelector('.txtRondas'),
+    txtEmpate = document.querySelector('.txtEmpate'),
+    txtJugador = document.querySelector('.txtJugador'),
+    txtPC = document.querySelector('.txtPC'),
+    txtGanador = document.querySelector('.txtGanador');
+
+    txtRondas.textContent = '';
+    txtEmpate.textContent = '';
+    txtJugador.textContent = '';
+    txtPC.textContent = '';
+    txtGanador.textContent = 'Definiendo...';
 }
 
 let btnSeleccionPiedra = document.querySelector('.btnPiedra');
 btnSeleccionPiedra.addEventListener('click', ()=>{
-    let getValue = btnSeleccionPiedra.value;
-    let arrayResults = Game(getValue);
-    seveResults(arrayResults);
+    let txtRondas = document.querySelector('.txtRondas'),
+    evaluar = txtRondas.textContent;
+    if(evaluar === ''){
+        let getValue = btnSeleccionPiedra.value;
+        let arrayResults = Game(getValue);
+        seveResults(arrayResults);
+    }else if( parseInt(evaluar) < 5){
+        let getValue = btnSeleccionPiedra.value;
+        let arrayResults = Game(getValue);
+        seguirJugando(arrayResults);
+    }else{
+        console.log("Juego a terminado. Si queiere volver a jugar por favor seleccione el boton volver a jugar o backGame");
+    }
 });
 
 let btnSeleccionPapel = document.querySelector('.btnPapel');
 btnSeleccionPapel.addEventListener('click', ()=>{
-    let getValue = btnSeleccionPapel.value;
-    let arrayResults = Game(getValue);
-    seveResults(arrayResults);
+    let txtRondas = document.querySelector('.txtRondas'),
+    evaluar = txtRondas.textContent;
+    if(evaluar === ''){
+        let getValue = btnSeleccionPapel.value;
+        let arrayResults = Game(getValue);
+        seveResults(arrayResults);
+    }else if( parseInt(evaluar) < 5){
+        let getValue = btnSeleccionPapel.value;
+        let arrayResults = Game(getValue);
+        seguirJugando(arrayResults);
+    }else{
+        console.log("Juego a terminado. Si queiere volver a jugar por favor seleccione el boton volver a jugar o backGame");
+    }
 });
 
-let btnSelecionTijera = document.querySelector('.btnTijera');
-btnSelecionTijera.addEventListener('click', ()=>{
-    let getValue = btnSelecionTijera.value;
-    let arrayResults = Game(getValue);
-    seveResults(arrayResults);
+let btnSeleccionTijera = document.querySelector('.btnTijera');
+btnSeleccionTijera.addEventListener('click', ()=>{
+    let txtRondas = document.querySelector('.txtRondas'),
+    evaluar = txtRondas.textContent;
+    if(evaluar === ''){
+        let getValue = btnSeleccionTijera.value;
+        let arrayResults = Game(getValue);
+        seveResults(arrayResults);
+    }else if( parseInt(evaluar) < 5){
+        let getValue = btnSeleccionTijera.value;
+        let arrayResults = Game(getValue);
+        seguirJugando(arrayResults);
+    }else{
+        console.log("Juego a terminado. Si queiere volver a jugar por favor seleccione el boton volver a jugar o backGame");
+    }
 });
+
+let btnVolverAJugar = document.querySelector('.btnBackGame');
+btnVolverAJugar.addEventListener('click', ()=>{gameBack()});
