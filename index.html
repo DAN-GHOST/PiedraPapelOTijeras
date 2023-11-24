@@ -3,39 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" href="./img/piedra-papel-tijeras.png">
+    <title>Juego: piedra, papel y tiejera</title>
     <link rel="stylesheet" href="./tyles.css/styles.css">
 </head>
 <body>
-    <div>
-        <h1>Juego piedra, papel o tijeras</h1>
-        <h2>Regles del juego</h2>
-        <p>Bienvenido, para empezar a juagar, debes conocer las reglas. Y acontinuación las podras conecer.</p>
-        <ol>
-            <li>Solo se puede jugar entre dos: Usted y la PC.</li>
-            <li>Para este juego, Existen 3 movimientos: Piedra, papel o tijera.</li>
-            <li>La forma en que interactua los tres movimientos son los siguientes: La piedra le gana a la tijera, La tijera le gana al papel y El pale le gana a la piedra.</li>
-            <li>Si hay un empate no se suman puntos para los jugadores.</li>
-            <li>La cantidad de rondas son 5.</li>
-            <li>Ahora bien y para finalizar, espero que disfrutes el juego y le des un like a este proyecto.</li>
-        </ol>
-        <h2>Selección para poder jugar</h2>
-        <p>Para poder juagar, nececitas seleccionar alguna de las siguintes opcines que se muestran en los botones de abajo.</p>
-        <div class=" contenedor-botones">
-            <button type="button" value="piedra" class="btnPiedra">Piedra</button>
-            <button type="button" value="papel" class="btnPapel">Papel</button>
-            <button type="button" value="tijera" class="btnTijera">Tijeras</button>
+    <div class="contenedor-principal">
+        <div class="contenedor-h1-titulo-juego">
+            <h1 class="titulo-h1">JUEGO PIEDRA, PAPEL Y TIJERA</h1>
         </div>
-        <h2>Resultados del juego</h2>
-        <div class = "contenedor-resultados">
-            <div class="contenedor-resultados-rondas">cantidad de rondas: <p class="txtRondas"></p></div>
-            <div class="contenedor-resultados-empate">Cantidad de empates: <p class="txtEmpate"></p></div>
-            <div class="contenedor-resultados-jugador">Cantidad de victorias del jugador: <p class="txtJugador"></p></div>
-            <div class="contenedor-resultados-PC">Cantidad de victorias de la PC: <p class="txtPC"></p></div>
+        <div class="contenedor-reglas-juego">
+            <h2 class="titulo-h2-1">Regles del juego</h2>
+            <p>Bienvenido, para empezar a juagar, debes conocer las reglas. Y acontinuación las podras conecer.</p>
+            <ol>
+                <li>Solo se puede jugar entre dos: Usted y la PC.</li>
+                <li>Para este juego, Existen 3 movimientos: Piedra, papel o tijera.</li>
+                <li>La forma en que interactua los tres movimientos son los siguientes: La piedra le gana a la tijera, La tijera le gana al papel y El pale le gana a la piedra.</li>
+                <li>Si hay un empate no se suman puntos para los jugadores.</li>
+                <li>La cantidad de rondas son 5.</li>
+                <li>Ahora bien y para finalizar, espero que disfrutes el juego y le des un like a este proyecto.</li>
+            </ol>
         </div>
-        <h2>Resultado final</h2>
-        <p class="txtGanador">Definiendo...</p>
-        <button type="button" class="btnBackGame">Volver a jugar</button>
+        <div class="contenedor-botones-juego">
+            <h2 class="titulo-h2-2">Selección para poder jugar</h2>
+            <p>Para poder juagar, nececitas seleccionar alguna de las siguintes opcines que se muestran en los botones de abajo.</p>
+            <div class=" contenedor-botones">
+                <button type="button" value="piedra" class="btnPiedra"><img src="./img/hacha.png" alt="Es una imgen que tiene una mana agarrando una piedra. Esta imagen tiene un estilo cartoon." width="48px"></button>
+                <button type="button" value="papel" class="btnPapel"><img src="./img/papel.png" alt="Es una imgen que tiene una mano que sostiene un papel.Esta imagen tiene un estilo cartoon." width="48px"></button>
+                <button type="button" value="tijera" class="btnTijera"><img src="./img/dedo.png" alt="Es una imgen que tiene una mano que sostiene unas tijeras.Esta imagen tiene un estilo cartoon." width="48px"></button>
+            </div>
+        </div>
+        <div class="contenedor-resultados-juego">
+            <h2 class="titulo-h2-3">Resultados del juego</h2>
+            <div class = "contenedor-resultados">
+                <div class="contenedor-resultados-rondas">cantidad de rondas: <p class="txtRondas"></p></div>
+                <div class="contenedor-resultados-empate">Cantidad de empates: <p class="txtEmpate"></p></div>
+                <div class="contenedor-resultados-jugador">Cantidad de victorias del jugador: <p class="txtJugador"></p></div>
+                <div class="contenedor-resultados-PC">Cantidad de victorias de la PC: <p class="txtPC"></p></div>
+            </div>
+        </div>
+        <div class="contenedor-resultadosFinal-juego">
+            <h2 class="titulo-h2-4">Resultado final</h2>
+            <p class="txtGanador">Definiendo...</p>
+            <p class="txtInfo"></p>
+        </div>
+        <div class="contenedor-boton-jugarDenuevo">
+            <button type="button" class="btnBackGame">Volver a jugar</button>
+        </div>
     </div>
     <script src="./logic.js/Script.js"></script>
 </body>
