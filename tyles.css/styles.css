@@ -8,11 +8,6 @@ body{
     font-family: Arial, 'Times New Roman', Verdana,'Franklin Gothic Medium', 'Arial Narrow', sans-serif, Times, serif, Geneva, Tahoma, sans-serif, 'Courier New', Courier, monospace, Georgia;
 }
 
-.contenedor-principal{
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-}
 .contenedor-h1-titulo-juego,
 .contenedor-reglas-juego,
 .contenedor-botones-juego,
@@ -23,17 +18,14 @@ body{
     flex-direction: column;
     align-items: center;
 }
-.contenedor-botones{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 90%;
-}
 
 .contenedor-principal,
 .contenedor-reglas-juego,
 .contenedor-botones-juego,
-.contenedor-resultados-juego{
+.contenedor-resultados-juego,
+.contenedor-resultados,
+.contenedor-lista-reglas-juego,
+.contenedor-resultadosFinal-juego{
     margin: 20px 10px;
     padding: 10px 20px;
 }
@@ -41,7 +33,10 @@ body{
 .contenedor-principal,
 .contenedor-reglas-juego,
 .contenedor-botones-juego,
-.contenedor-resultados-juego{
+.contenedor-resultados-juego,
+.contenedor-resultados,
+.contenedor-lista-reglas-juego,
+.contenedor-resultadosFinal-juego{
     border: rgb(255, 255, 255, .2) solid 2px; 
     border-radius: 20px;
 }
@@ -55,6 +50,73 @@ body{
     font-family: 'Atón';
 }
 
+.contenedor-resultados-rondas,
+.contenedor-resultados-empate,
+.contenedor-resultados-jugador,
+.contenedor-resultados-PC{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 20px;
+    border: rgb(255, 255, 255, .2) solid 2px;
+    
+}
+.contenedor-info-ronda,
+.contenedor-info-empate,
+.contenedor-info-jugador,
+.contenedor-info-PC{
+    display: flex;
+    flex-basis: 100%;
+}
+
+.contenedor-resultado-jugador,
+.contenedor-resultado-empate,
+.contenedor-resultado-ronda,
+.contenedor-resultado-PC{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 50px;
+    min-height: 50px;
+}
+.txtJugador,
+.txtPC,
+.txtEmpate,
+.txtRondas{
+    margin: 16px;
+}
+
+.contenedor-lista-reglas-juego,
+.txtInfo-relges-juego,
+.txtinfo-botones-seleccion,
+.contenedor-info-ronda,
+.contenedor-resultado-ronda,
+.contenedor-info-empate,
+.contenedor-resultado-empate,
+.contenedor-info-jugador,
+.contenedor-resultado-jugador,
+.contenedor-info-PC,
+.contenedor-resultado-PC,
+.txtGanador,
+.txtInfo{
+    color: white;
+}
+
+.contenedor-principal{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.contenedor-botones{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+}
+
 .contenedor-h1-titulo-juego{
     margin: 20px 10px;
     color: white;
@@ -62,7 +124,7 @@ body{
 
 .contenedor-principal{
     background: transparent;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(40px);
 }
 
 .contenedor-botones button{
@@ -73,4 +135,13 @@ body{
     border: none;
     outline: none;
     border-radius: 40px;
+}
+button:hover{
+    scale: 1.03;
+    background: orange;
+}
+
+.contenedor-resultados{
+    display: flex;
+    flex-direction: row;
 }
