@@ -168,7 +168,9 @@ btnSeleccionPapel.addEventListener('click', ()=>{
         let arrayResults = Game(getValue);
         seguirJugando(arrayResults);
         evaluar = txtRondas.textContent;
-        txttxtInfo.textContent="El juego a terminado. Si queiere volver a jugar por favor seleccione el boton \"volver a jugar\"";
+        if(parseInt(evaluar) === 5){
+            txttxtInfo.textContent="El juego a terminado. Si queiere volver a jugar por favor seleccione el boton \"volver a jugar\"";
+        }
     }
 });
 
@@ -186,7 +188,9 @@ btnSeleccionTijera.addEventListener('click', ()=>{
         let arrayResults = Game(getValue);
         seguirJugando(arrayResults);
         evaluar = txtRondas.textContent;
-        txttxtInfo.textContent="El juego a terminado. Si queiere volver a jugar por favor seleccione el boton \"volver a jugar\"";
+        if(parseInt(evaluar) === 5){
+            txttxtInfo.textContent="El juego a terminado. Si queiere volver a jugar por favor seleccione el boton \"volver a jugar\"";
+        }
     }
 });
 
