@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./img/piedra-papel-tijeras.png">
+    <link rel="icon" href="./img/piedra-papel-tijeras.png" alt="Es uan imagen con estilo cartton. Esta imagen tiene tres manos realizando las señaes que se utlizan para el juego de piedra, papael y tiejeras. La imagen es a color.">
     <title>Juego: piedra, papel y tiejera</title>
     <link rel="stylesheet" href="./tyles.css/styles.css">
 </head>
@@ -30,27 +30,27 @@
             <h2 class="titulo-h2-2">Selección para poder jugar</h2>
             <p class="txtinfo-botones-seleccion">Para poder juagar, nececitas seleccionar alguna de las siguintes opcines que se muestran en los botones de abajo.</p>
             <div class=" contenedor-botones">
-                <button type="button" value="piedra" class="btnPiedra"><img  id="img-piedra" src="./img/hacha.png" alt="Es una imgen que tiene una mana agarrando una piedra. Esta imagen tiene un estilo cartoon." width="48px"></button>
-                <button type="button" value="papel" class="btnPapel"><img src="./img/papel.png" alt="Es una imgen que tiene una mano que sostiene un papel.Esta imagen tiene un estilo cartoon." width="48px"></button>
-                <button type="button" value="tijera" class="btnTijera"><img src="./img/dedo.png" alt="Es una imgen que tiene una mano que sostiene unas tijeras.Esta imagen tiene un estilo cartoon." width="48px"></button>
+                <button type="button" value="piedra" class="btnPiedra"><img class="img" src="./img/hacha.png" alt="Es una imgen que tiene una mana agarrando una piedra. Esta imagen tiene un estilo cartoon." width="48px"></button>
+                <button type="button" value="papel" class="btnPapel"><img class="img" src="./img/papel.png" alt="Es una imgen que tiene una mano que sostiene un papel.Esta imagen tiene un estilo cartoon." width="48px"></button>
+                <button type="button" value="tijera" class="btnTijera"><img class="img" src="./img/dedo.png" alt="Es una imgen que tiene una mano que sostiene unas tijeras.Esta imagen tiene un estilo cartoon." width="48px"></button>
             </div>
         </div>
         <div class="contenedor-resultados-juego">
             <h2 class="titulo-h2-3">Resultados del juego</h2>
             <div class = "contenedor-resultados">
-                <div class="contenedor-resultados-rondas">
+                <div class="contenedor-resultados-rondas result">
                     <div class="contenedor-info-ronda">cantidad de rondas:</div>
                     <div  class="contenedor-resultado-ronda"><p class="txtRondas"></p></div>
                 </div>
-                <div class="contenedor-resultados-empate">
+                <div class="contenedor-resultados-empate result">
                     <div  class="contenedor-info-empate">Cantidad de empates:</div>
                     <div class="contenedor-resultado-empate"><p class="txtEmpate"></p></div>
                 </div>
-                <div class="contenedor-resultados-jugador">
+                <div class="contenedor-resultados-jugador result">
                     <div  class="contenedor-info-jugador">Cantidad de victorias del jugador:</div>
                     <div class="contenedor-resultado-jugador"><p class="txtJugador"></p></div>
                 </div>
-                <div class="contenedor-resultados-PC">
+                <div class="contenedor-resultados-PC result">
                     <div class="contenedor-info-PC">Cantidad de victorias de la PC:</div>
                     <div class="contenedor-resultado-PC"><p class="txtPC"></p></div>
                 </div>
@@ -58,8 +58,12 @@
         </div>
         <div class="contenedor-resultadosFinal-juego">
             <h2 class="titulo-h2-4">Resultado final</h2>
-            <p class="txtGanador">Definiendo...</p>
-            <p class="txtInfo"></p>
+            <div class="contenedor-txtGanador">
+                <p class="txtGanador">Definiendo...</p>
+            </div>
+            <div class="contenedor-txtinfo">
+                <p class="txtInfo"></p>
+            </div>
         </div>
         <div class="contenedor-boton-jugarDenuevo">
             <button type="button" class="btnBackGame">Volver a jugar</button>

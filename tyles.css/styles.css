@@ -25,7 +25,8 @@ body{
 .contenedor-resultados-juego,
 .contenedor-resultados,
 .contenedor-lista-reglas-juego,
-.contenedor-resultadosFinal-juego{
+.contenedor-resultadosFinal-juego,
+.contenedor-boton-jugarDenuevo{
     margin: 20px 10px;
     padding: 10px 20px;
 }
@@ -58,7 +59,7 @@ body{
     flex-direction: column;
     align-items: stretch;
     margin: 10px;
-    padding: 5px;
+    padding: 8px;
     border-radius: 20px;
     border: rgb(255, 255, 255, .2) solid 2px;
     
@@ -127,7 +128,8 @@ body{
     backdrop-filter: blur(40px);
 }
 
-.contenedor-botones button{
+.contenedor-botones button,
+.contenedor-boton-jugarDenuevo button{
     margin: 0px 5px;
     width: 100%;
     height: 50px;
@@ -139,9 +141,44 @@ body{
 button:hover{
     scale: 1.03;
     background: orange;
+    border: 5px inset black;
+    .img{
+        width: 38px;
+    }
 }
 
 .contenedor-resultados{
     display: flex;
     flex-direction: row;
+}
+
+.contenedor-txtinfo:hover{
+    background: yellow;
+    border-radius: 20px;
+    .txtInfo{
+        color: black;
+    }
+}
+
+.result:hover{
+    background: rgb(88, 248, 253);
+    border-radius: 20px;
+    .contenedor-info-PC,
+    .contenedor-info-ronda,
+    .contenedor-info-empate,
+    .contenedor-info-jugador,
+    .txtEmpate,
+    .txtGanador,
+    .txtJugador,
+    .txtPC,
+    .txtRondas{
+        color: black;
+    }
+    
+}
+
+.txtInfo{
+    min-width: 60px;
+    min-height: 18px;
+    padding: 0px 5px;
 }

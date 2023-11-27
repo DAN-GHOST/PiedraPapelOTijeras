@@ -146,9 +146,12 @@ btnSeleccionPiedra.addEventListener('click', ()=>{
         let getValue = btnSeleccionPiedra.value;
         let arrayResults = Game(getValue);
         seguirJugando(arrayResults);
-    }else{
-        txttxtInfo.textContent="El juego a terminado. Si queiere volver a jugar por favor seleccione el boton \"volver a jugar\"";
+        evaluar = txtRondas.textContent;
+        if(parseInt(evaluar) === 5){
+            txttxtInfo.textContent="El juego a terminado. Si queiere volver a jugar por favor seleccione el boton \"volver a jugar\"";
+        }
     }
+
 });
 
 let btnSeleccionPapel = document.querySelector('.btnPapel');
@@ -164,7 +167,7 @@ btnSeleccionPapel.addEventListener('click', ()=>{
         let getValue = btnSeleccionPapel.value;
         let arrayResults = Game(getValue);
         seguirJugando(arrayResults);
-    }else{
+        evaluar = txtRondas.textContent;
         txttxtInfo.textContent="El juego a terminado. Si queiere volver a jugar por favor seleccione el boton \"volver a jugar\"";
     }
 });
@@ -182,7 +185,7 @@ btnSeleccionTijera.addEventListener('click', ()=>{
         let getValue = btnSeleccionTijera.value;
         let arrayResults = Game(getValue);
         seguirJugando(arrayResults);
-    }else{
+        evaluar = txtRondas.textContent;
         txttxtInfo.textContent="El juego a terminado. Si queiere volver a jugar por favor seleccione el boton \"volver a jugar\"";
     }
 });
